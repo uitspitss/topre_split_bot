@@ -39,7 +39,7 @@ func tweet(api *anaconda.TwitterApi, tweet_text string) anaconda.Tweet {
 }
 
 func main() {
-    search_words := []string{"左右", "セパレート", "分離", "方式"}
+    search_words := []string{"左右", "セパレート", "分離"}
 
     api_key := os.Getenv("TSB_API_KEY")
     api_secret := os.Getenv("TSB_API_SECRET")
