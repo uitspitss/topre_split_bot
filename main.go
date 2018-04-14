@@ -39,7 +39,7 @@ func tweet(api *anaconda.TwitterApi, tweet_text string) anaconda.Tweet {
 }
 
 func main() {
-    search_words := []string{"左右", "セパレート", "分離"}
+    search_words := []string{"スプリット", "左右", "セパレート", "分離"}
 
     api_key := os.Getenv("TSB_API_KEY")
     api_secret := os.Getenv("TSB_API_SECRET")
@@ -65,7 +65,7 @@ func main() {
     tweet_text := ""
     if find_flag {
         tweet_text =  time.Now().Format("1月2日15時4分") + "現在、" + url + " に 「" + strings.Join(find_words, ",") + "」が見つかりました。スプリットキーボードが発売されるといいね✨"
-    } else if time.Now().Hour() == 23 {
+    } else if time.Now().Hour() == 23 - 9 {
         tweet_text = time.Now().Format("1月2日") + "はスプリットキーボードが発表されなかったね…また明日に期待💁🏼‍♀️"
     } else {
         tweet_text = ""
